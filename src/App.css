@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Parkinsans",
+        sans-serif;
+   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+   
+    background-color: rgb(219,230,253);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+    font-size: 3.2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+h2{
+    
+    font-size: 2.4rem;
+}
+p{
+    margin: 2rem 0;
+    color: rgba(21,19,60,0.5);
+    font-weight: 400;
+    font-size: 1.6rem;
+    display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+span{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: gray;
+    font-size: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.card{
+    margin: 2rem;
+    min-width: 20rem;
+    width: 40vw;
+    padding: 4rem;
+    background-color: #ffffff;
+    box-shadow: rgba(100,100,111,0.2) 0px 7px 29px 0px;
+    border-radius: 0.5rem;
+    color: #15133c;
+}
+.card-buttons{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-buttons a{
+    color: #92b4ec;
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.card-buttons a:last-child{
+        color: red;
+}
+
+.stories-div{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo{
+    margin-left: 4px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    cursor: pointer;
+    
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search input{
+    margin-top: -50px;
+    width: 300px;
+    height: 40px;
+    padding: 0.4rem;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    position: relative;
+    border-bottom: 1.5px solid black;
+   
+}
+
+/* Bottom border animation */
+.input::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: blue;
+    /* Animation color */
+    transition: width 0.5s ease-in-out;
+}
+
+.input.active::after {
+    width: 100%;
+    /* Expand the border fully */
+}
+
+.pageination{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns button{
+    padding: 0.6rem 1.2rem;
+    margin: 20px;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    &:hover{
+        background-color: red;
+        color: white;
+        font-size: 10px;
+        opacity: 0.8;
+    }
+}
+
+/* responsive layout  */
+
+@media (max-width: 998px) {
+    html {
+        font-size: 56%;
+    }
+
+    .card {
+        min-width: 45rem;
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 51%;
+    }
+
+    .card {
+        min-width: 35rem;
+        padding: 2rem;
+    }
+    .logo{
+        margin-bottom: 40px;
+        
+    }
 }
